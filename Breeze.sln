@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{870F2B3A-B1FD-4D02-A261-BF7985240413}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breeze", "src\Breeze\Breeze.csproj", "{EB10FC1A-2D73-4FE9-8FF2-73C605F40945}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E2C2D10C-F0AF-46C1-A5EC-2E3EE929D5C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breeze.Tests", "tests\Breeze.Tests\Breeze.Tests.csproj", "{3490061C-74ED-49AF-AF00-3994468B03CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1775A3E1-B8B2-43C1-9235-A9015C2814CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1775A3E1-B8B2-43C1-9235-A9015C2814CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1775A3E1-B8B2-43C1-9235-A9015C2814CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1775A3E1-B8B2-43C1-9235-A9015C2814CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB10FC1A-2D73-4FE9-8FF2-73C605F40945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB10FC1A-2D73-4FE9-8FF2-73C605F40945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB10FC1A-2D73-4FE9-8FF2-73C605F40945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB10FC1A-2D73-4FE9-8FF2-73C605F40945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3490061C-74ED-49AF-AF00-3994468B03CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3490061C-74ED-49AF-AF00-3994468B03CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3490061C-74ED-49AF-AF00-3994468B03CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3490061C-74ED-49AF-AF00-3994468B03CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60FEF759-3CC7-4FCF-98AA-5E068B92564B}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB10FC1A-2D73-4FE9-8FF2-73C605F40945} = {870F2B3A-B1FD-4D02-A261-BF7985240413}
+		{3490061C-74ED-49AF-AF00-3994468B03CA} = {E2C2D10C-F0AF-46C1-A5EC-2E3EE929D5C6}
+	EndGlobalSection
+EndGlobal
