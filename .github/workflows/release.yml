@@ -1,0 +1,71 @@
+name: Build Release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      PROJECT_PATH: ./src/Breeze/Breeze.csproj
+      DOTNET_VERSION: "8.0.x"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Get version from tag
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test --no-restore --verbosity normal
+
+      - name: Publish
+        run: |
+          dotnet publish ${{ env.PROJECT_PATH }} \
+            --configuration Release \
+            --no-restore \
+            --no-build \
+            --output ./publish
+
+      - name: Create artifacts for different platforms
+        run: |
+          for platform in win-x64 linux-x64 osx-x64
+          do
+            dotnet publish ${{ env.PROJECT_PATH }} \
+              --configuration Release \
+              --runtime $platform \
+              --self-contained true \
+              --output ./publish/$platform
+          done
+
+      - name: Zip artifacts
+        run: |
+          cd publish
+          for platform in win-x64 linux-x64 osx-x64
+          do
+            zip -r Breeze-${{ steps.get_version.outputs.VERSION }}-$platform.zip $platform/
+          done
+
+      - name: Upload artifacts to release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            publish/Breeze-${{ steps.get_version.outputs.VERSION }}-win-x64.zip
+            publish/Breeze-${{ steps.get_version.outputs.VERSION }}-linux-x64.zip
+            publish/Breeze-${{ steps.get_version.outputs.VERSION }}-osx-x64.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
