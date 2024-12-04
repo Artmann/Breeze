@@ -9,6 +9,25 @@
 
 {{/each}}
 
+/** Border position **/
+
+{{#each config.backgroundPosition}}
+.bg-{{@key}} {
+  background-position: {{@value}};
+}
+
+{{/each}}
+
+/** Background size **/
+
+{{#each config.backgroundSize}}
+.bg-{{@key}} {
+  background-size: {{@value}};
+}
+
+{{/each}}
+
+
 /** Padding **/
 
 {{#each config.padding}}
