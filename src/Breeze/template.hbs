@@ -27,6 +27,147 @@
 
 {{/each}}
 
+/** Blur **/
+
+{{#each config.blur}}
+.blur-{{@key}} {
+  filter: blur({{@value}});
+}
+
+{{/each}}
+
+/** Border radius **/
+
+{{#each config.borderRadius}}
+.rounded-{{@key}} {
+  border-radius: {{@value}};
+}
+
+{{/each}}
+
+/** Border width **/
+
+{{#each config.borderWidth}}
+.border-{{@key}} {
+  border-width: {{@value}};
+}
+
+{{/each}}
+
+/** Brightness **/
+
+{{#each config.brightness}}
+.brightness-{{@key}} {
+  filter: brightness({{@value}});
+}
+
+{{/each}}
+
+/** Font size **/
+
+{{#each config.fontSize}}
+.text-{{@key}} {
+  font-size: {{@value}};
+}
+
+{{/each}}
+
+/** Font weight **/
+
+{{#each config.fontWeight}}
+.font-{{@key}} {
+  font-weight: {{@value}};
+}
+
+{{/each}}
+
+/** Line height **/
+
+{{#each config.lineHeight}}
+.leading-{{@key}} {
+  line-height: {{@value}};
+}
+
+{{/each}}
+
+/** Margin **/
+
+{{#each config.margin}}
+.m-{{@key}} {
+  margin: {{@value}};
+}
+
+.mb-{{@key}} {
+  margin-bottom: {{@value}};
+}
+
+.ml-{{@key}} {
+  margin-left: {{@value}};
+}
+
+.mr-{{@key}} {
+  margin-right: {{@value}};
+}
+
+.mt-{{@key}} {
+  margin-top: {{@value}};
+}
+
+.mx-{{@key}} {
+  margin-left: {{@value}};
+  margin-right: {{@value}};
+}
+
+.my-{{@key}} {
+  margin-top: {{@value}};
+  margin-bottom: {{@value}};
+}
+
+{{/each}}
+
+/** Max width **/
+
+{{#each config.maxWidth}}
+.max-w-{{@key}} {
+  max-width: {{@value}};
+}
+
+{{/each}}
+
+/** Opacity **/
+
+{{#each config.opacity}}
+.opacity-{{@key}} {
+  opacity: {{@value}};
+}
+
+{{/each}}
+
+/** Order **/
+{{#each config.order}}
+.order-{{@key}} {
+  order: {{@value}};
+}
+
+{{/each}}
+
+/** Outline offset **/
+
+{{#each config.outlineOffset}}
+.outline-offset-{{@key}} {
+  outline-offset: {{@value}};
+}
+
+{{/each}}
+
+/** Outline width **/
+
+{{#each config.outlineWidth}}
+.outline-{{@key}} {
+  outline-width: {{@value}};
+}
+
+{{/each}}
 
 /** Padding **/
 
@@ -63,10 +204,29 @@
 
 {{/each}}
 
+/** Size **/
+
+{{#each config.size}}
+.size-{{@key}} {
+  width: {{@value}};
+  height: {{@value}};
+}
+
+{{/each}}
+
 /** Width **/
 
 {{#each config.width}}
 .w-{{@key}} {
   width: {{@value}};
 }
+{{/each}}
+
+/** Z-index **/
+
+{{#each config.zIndex}}
+.z-{{@key}} {
+  z-index: {{@value}};
+}
+
 {{/each}}

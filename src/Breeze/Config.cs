@@ -265,7 +265,7 @@ public class Config
             { "100", "1" }
         };
 
-      var order = new Dictionary<string, string>
+        var order = new Dictionary<string, string>
         {
             { "first", "-9999" },
             { "last", "9999" },
