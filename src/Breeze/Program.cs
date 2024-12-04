@@ -1,4 +1,4 @@
-﻿using Breeze;
+using Breeze;
 
 var templatePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "template.hbs");
 
