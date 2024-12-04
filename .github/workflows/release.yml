@@ -70,7 +70,6 @@ jobs:
             cp ../Breeze.uss $platform/
             zip -r Breeze-${{ steps.get_version.outputs.VERSION }}-$platform.zip $platform/
           done
-          zip -j Breeze-${{ steps.get_version.outputs.VERSION }}-uss.zip ../Breeze.uss
 
       - name: Upload artifacts to release
         uses: softprops/action-gh-release@v1
@@ -79,6 +78,6 @@ jobs:
             publish/Breeze-${{ steps.get_version.outputs.VERSION }}-win-x64.zip
             publish/Breeze-${{ steps.get_version.outputs.VERSION }}-linux-x64.zip
             publish/Breeze-${{ steps.get_version.outputs.VERSION }}-osx-x64.zip
-            publish/Breeze-${{ steps.get_version.outputs.VERSION }}-uss.zip
+            Breeze.uss
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
