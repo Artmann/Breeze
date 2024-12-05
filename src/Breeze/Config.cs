@@ -5,25 +5,20 @@ public class Config
     public Dictionary<string, string> aspectRatio = [];
     public Dictionary<string, string> backgroundPosition = [];
     public Dictionary<string, string> backgroundSize = [];
-    public Dictionary<string, string> blur = [];
     public Dictionary<string, string> borderRadius = [];
     public Dictionary<string, string> borderWidth = [];
-    public Dictionary<string, string> brightness = [];
     public Dictionary<string, string> colors = [];
     public Dictionary<string, string> fontSize = [];
-    public Dictionary<string, string> fontWeight = [];
-    public Dictionary<string, string> lineHeight = [];
+    public Dictionary<string, string> fontStyles = [];
     public Dictionary<string, string> margin = [];
     public Dictionary<string, string> maxWidth = [];
     public Dictionary<string, string> opacity = [];
-    public Dictionary<string, string> order = [];
     public Dictionary<string, string> outlineOffset = [];
     public Dictionary<string, string> outlineWidth = [];
     public Dictionary<string, string> padding = [];
     public Dictionary<string, string> size = [];
     public Dictionary<string, string> spacing = [];
     public Dictionary<string, string> width = [];
-    public Dictionary<string, string> zIndex = [];
 
     public Config Merge(Config other)
     {
@@ -54,8 +49,6 @@ public class Config
     public static Config Default()
     {
         var colors = new Dictionary<string, string> {
-            { "inherit", "inherit" },
-            { "current", "currentColor" },
             { "transparent", "transparent" },
             { "black", "#000" },
             { "white", "#fff" },
@@ -303,7 +296,6 @@ public class Config
             { "rose-950", "#4c0519" }
         };
 
-
         var spacing = new Dictionary<string, string> {
         { "px", "1px" },
         { "0", "0px" },
@@ -369,18 +361,6 @@ public class Config
             { "contain", "contain" }
         };
 
-        var blur = new Dictionary<string, string>
-        {
-            { "0", "0" },
-            { "none", "" },
-            { "sm", "4px" },
-            { "DEFAULT", "8px" },
-            { "md", "12px" },
-            { "lg", "16px" },
-            { "xl", "24px" },
-            { "2xl", "40px" },
-            { "3xl", "64px" }
-        };
 
         var borderRadius = new Dictionary<string, string>
         {
@@ -404,21 +384,6 @@ public class Config
             { "8", "8px" }
         };
 
-        var brightness = new Dictionary<string, string>
-        {
-            { "0", "0" },
-            { "50", ".5" },
-            { "75", ".75" },
-            { "90", ".9" },
-            { "95", ".95" },
-            { "100", "1" },
-            { "105", "1.05" },
-            { "110", "1.1" },
-            { "125", "1.25" },
-            { "150", "1.5" },
-            { "200", "2" }
-        };
-
         var fontSize = new Dictionary<string, string>
         {
             { "xs", "12px" },     // 0.75rem
@@ -436,35 +401,12 @@ public class Config
             { "9xl", "128px" }    // 8rem
         };
 
-        var fontWeight = new Dictionary<string, string>
+        var fontStyles = new Dictionary<string, string>
         {
-            { "thin", "100" },
-            { "extralight", "200" },
-            { "light", "300" },
-            { "normal", "400" },
-            { "medium", "500" },
-            { "semibold", "600" },
-            { "bold", "700" },
-            { "extrabold", "800" },
-            { "black", "900" }
-        };
-
-        var lineHeight = new Dictionary<string, string>
-        {
-            { "none", "1" },
-            { "tight", "1.25" },
-            { "snug", "1.375" },
-            { "normal", "1.5" },
-            { "relaxed", "1.625" },
-            { "loose", "2" },
-            { "3", "12px" },      // 0.75rem
-            { "4", "16px" },      // 1rem
-            { "5", "20px" },      // 1.25rem
-            { "6", "24px" },      // 1.5rem
-            { "7", "28px" },      // 1.75rem
-            { "8", "32px" },      // 2rem
-            { "9", "36px" },      // 2.25rem
-            { "10", "40px" }      // 2.5rem
+            { "normal", "normal" },
+            { "italic ", "italic" },
+            { "bold", "bold" },
+            { "bold-italic", "bold-and-italic" }
         };
 
         var margin = MergeDictionaries(spacing, new Dictionary<string, string> {
@@ -486,10 +428,6 @@ public class Config
             { "6xl", "1152px" },  // 72rem
             { "7xl", "1280px" },  // 80rem
             { "full", "100%" },
-            { "min", "min-content" },
-            { "max", "max-content" },
-            { "fit", "fit-content" },
-            { "prose", "65ch" }
         };
 
         var opacity = new Dictionary<string, string>
@@ -515,25 +453,6 @@ public class Config
             { "90", "0.9" },
             { "95", "0.95" },
             { "100", "1" }
-        };
-
-        var order = new Dictionary<string, string>
-        {
-            { "first", "-9999" },
-            { "last", "9999" },
-            { "none", "0" },
-            { "1", "1" },
-            { "2", "2" },
-            { "3", "3" },
-            { "4", "4" },
-            { "5", "5" },
-            { "6", "6" },
-            { "7", "7" },
-            { "8", "8" },
-            { "9", "9" },
-            { "10", "10" },
-            { "11", "11" },
-            { "12", "12" }
         };
 
         var outlineOffset = new Dictionary<string, string>
@@ -587,9 +506,6 @@ public class Config
             { "10/12", "83.333333%" },
             { "11/12", "91.666667%" },
             { "full", "100%" },
-            { "min", "min-content" },
-            { "max", "max-content" },
-            { "fit", "fit-content" }
         });
 
         var width = MergeDictionaries(spacing, new Dictionary<string, string> {
@@ -623,41 +539,25 @@ public class Config
         { "full", "100%" },
       });
 
-        var zIndex = new Dictionary<string, string>
-        {
-            { "auto", "auto" },
-            { "0", "0" },
-            { "10", "10" },
-            { "20", "20" },
-            { "30", "30" },
-            { "40", "40" },
-            { "50", "50" }
-        };
-
         return new Config
         {
             aspectRatio = aspectRatio,
             backgroundPosition = backgroundPosition,
             backgroundSize = backgroundColor,
-            blur = blur,
             borderRadius = borderRadius,
             borderWidth = borderWidth,
-            brightness = brightness,
             colors = colors,
             fontSize = fontSize,
-            fontWeight = fontWeight,
-            lineHeight = lineHeight,
+            fontStyles = fontStyles,
             margin = margin,
             maxWidth = maxWidth,
             opacity = opacity,
-            order = order,
             outlineOffset = outlineOffset,
             outlineWidth = outlineWidth,
             padding = padding,
             size = size,
             spacing = spacing,
             width = width,
-            zIndex = zIndex,
         };
     }
 
