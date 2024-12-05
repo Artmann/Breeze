@@ -17,6 +17,15 @@
 
 {{/each}}
 
+/** Background size **/
+
+{{#each config.backgroundSize}}
+.bg-{{@key}} {
+  background-size: {{@value}};
+}
+
+{{/each}}
+
 /** Border Colors **/
 
 {{#each config.colors}}
@@ -34,16 +43,6 @@
 }
 
 {{/each}}
-
-/** Background size **/
-
-{{#each config.backgroundSize}}
-.bg-{{@key}} {
-  background-size: {{@value}};
-}
-
-{{/each}}
-
 
 /** Border radius **/
 
@@ -63,6 +62,15 @@
 
 {{/each}}
 
+/** Bottom **/
+
+{{#each config.spacing}}
+.bottom-{{@key}} {
+  bottom: {{@value}};
+}
+
+{{/each}}
+
 /** Font size **/
 
 {{#each config.fontSize}}
@@ -77,6 +85,37 @@
 {{#each config.fontWeight}}
 .font-{{@key}} {
   font-weight: {{@value}};
+}
+
+{{/each}}
+
+/** Inset **/
+
+{{#each config.spacing}}
+.inset-{{@key}} {
+  top: {{@value}};
+  right: {{@value}};
+  bottom: {{@value}};
+  left: {{@value}};
+}
+
+.inset-x-{{@key}} {
+  right: {{@value}};
+  left: {{@value}};
+}
+
+.inset-y-{{@key}} {
+  top: {{@value}};
+  bottom: {{@value}};
+}
+
+{{/each}}
+
+/** Left **/
+
+{{#each config.spacing}}
+.left-{{@key}} {
+  left: {{@value}};
 }
 
 {{/each}}
@@ -177,6 +216,25 @@
 
 {{/each}}
 
+/** Position **/
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+/** Right **/
+
+{{#each config.spacing}}
+.right-{{@key}} {
+  right: {{@value}};
+}
+
+{{/each}}
+
 /** Size **/
 
 {{#each config.size}}
@@ -192,6 +250,15 @@
 {{#each config.colors}}
 .text-{{@key}} {
   color: {{@value}};
+}
+
+{{/each}}
+
+/** Top **/
+
+{{#each config.spacing}}
+.top-{{@key}} {
+  top: {{@value}};
 }
 
 {{/each}}
