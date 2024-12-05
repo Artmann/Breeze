@@ -9,6 +9,24 @@
 
 {{/each}}
 
+/** Background color **/
+
+{{#each config.colors}}
+.bg-{{@key}} {
+  background-color: {{@value}};
+}
+
+{{/each}}
+
+/** Border Colors **/
+
+{{#each config.colors}}
+.border-{{@key}} {
+  border-color: {{@value}};
+}
+
+{{/each}}
+
 /** Border position **/
 
 {{#each config.backgroundPosition}}
@@ -59,6 +77,15 @@
 {{#each config.brightness}}
 .brightness-{{@key}} {
   filter: brightness({{@value}});
+}
+
+{{/each}}
+
+/** Fill Colors **/
+
+{{#each config.colors}}
+.fill-{{@key}} {
+  fill: {{@value}};
 }
 
 {{/each}}
@@ -151,6 +178,15 @@
 
 {{/each}}
 
+/** Outline color **/
+
+{{#each config.colors}}
+.outline-{{@key}} {
+  outline-color: {{@value}};
+}
+
+{{/each}}
+
 /** Outline offset **/
 
 {{#each config.outlineOffset}}
@@ -210,6 +246,24 @@
 .size-{{@key}} {
   width: {{@value}};
   height: {{@value}};
+}
+
+{{/each}}
+
+/** Stroke color **/
+
+{{#each config.colors}}
+.stroke-{{@key}} {
+  stroke: {{@value}};
+}
+
+{{/each}}
+
+/** Text color **/
+
+{{#each config.colors}}
+.text-{{@key}} {
+  color: {{@value}};
 }
 
 {{/each}}
