@@ -8,6 +8,24 @@
  * Repository: https://github.com/Artmann/Breeze
  */
 
+/** Align items **/
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
 /** Background color **/
 
 {{#each config.colors}}
@@ -71,6 +89,72 @@
 
 {{/each}}
 
+/** Flex **/
+
+.flex {
+  display: flex;
+}
+
+{{#each config.flex}}
+.flex-{{@key}} {
+  flex: {{@value}};
+}
+
+{{/each}}
+
+/** Flex basis **/
+
+{{#each config.flexBasis}}
+.basis-{{@key}} {
+  flex-basis: {{@value}};
+}
+
+{{/each}}
+
+/** Flex direction **/
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/** Flex grow **/
+
+.grow {
+  flex-grow: 1;
+}
+
+{{#each config.flexGrow}}
+.grow-{{@key}} {
+  flex-grow: {{@value}};
+}
+
+{{/each}}
+
+/** Flex shrink **/
+
+.shrink {
+  flex-shrink: 1;
+}
+
+{{#each config.flexShrink}}
+.shrink-{{@key}} {
+  flex-shrink: {{@value}};
+}
+
+{{/each}}
+
 /** Font size **/
 
 {{#each config.fontSize}}
@@ -110,6 +194,32 @@
 }
 
 {{/each}}
+
+/** Justify content **/
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
 
 /** Left **/
 

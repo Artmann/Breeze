@@ -8,6 +8,10 @@ public class Config
     public Dictionary<string, string> borderRadius = [];
     public Dictionary<string, string> borderWidth = [];
     public Dictionary<string, string> colors = [];
+    public Dictionary<string, string> flex = [];
+    public Dictionary<string, string> flexBasis = [];
+    public Dictionary<string, string> flexGrow = [];
+    public Dictionary<string, string> flexShrink = [];
     public Dictionary<string, string> fontSize = [];
     public Dictionary<string, string> fontStyles = [];
     public Dictionary<string, string> margin = [];
@@ -384,6 +388,55 @@ public class Config
             { "8", "8px" }
         };
 
+        var flex = new Dictionary<string, string>
+        {
+            { "1", "1 1 0%" },
+            { "auto", "1 1 auto" },
+            { "initial", "0 1 auto" },
+            { "none", "none" }
+        };
+
+        var flexBasis = MergeDictionaries(spacing, new Dictionary<string, string> {
+            { "auto", "auto" },
+            { "full", "100%" },
+            { "1/2", "50%" },
+            { "1/3", "33.333333%" },
+            { "2/3", "66.666667%" },
+            { "1/4", "25%" },
+            { "2/4", "50%" },
+            { "3/4", "75%" },
+            { "1/5", "20%" },
+            { "2/5", "40%" },
+            { "3/5", "60%" },
+            { "4/5", "80%" },
+            { "1/6", "16.666667%" },
+            { "2/6", "33.333333%" },
+            { "3/6", "50%" },
+            { "4/6", "66.666667%" },
+            { "5/6", "83.333333%" },
+            { "1/12", "8.333333%" },
+            { "2/12", "16.666667%" },
+            { "3/12", "25%" },
+            { "4/12", "33.333333%" },
+            { "5/12", "41.666667%" },
+            { "6/12", "50%" },
+            { "7/12", "58.333333%" },
+            { "8/12", "66.666667%" },
+            { "9/12", "75%" },
+            { "10/12", "83.333333%" },
+            { "11/12", "91.666667%" },
+        });
+
+        var flexGrow = new Dictionary<string, string>
+        {
+            { "0", "0" },
+        };
+
+        var flexShrink = new Dictionary<string, string>
+        {
+            { "0", "0" },
+        };
+
         var fontSize = new Dictionary<string, string>
         {
             { "xs", "12px" },     // 0.75rem
@@ -547,6 +600,10 @@ public class Config
             borderRadius = borderRadius,
             borderWidth = borderWidth,
             colors = colors,
+            flex = flex,
+            flexBasis = flexBasis,
+            flexGrow = flexGrow,
+            flexShrink = flexShrink,
             fontSize = fontSize,
             fontStyles = fontStyles,
             margin = margin,
