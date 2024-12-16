@@ -173,6 +173,15 @@
 
 {{/each}}
 
+/** Height **/
+
+{{#each config.height}}
+.h-{{@key}} {
+  height: {{@value}};
+}
+
+{{/each}}
+
 /** Inset **/
 
 {{#each config.spacing}}
