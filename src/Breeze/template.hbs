@@ -29,7 +29,7 @@
 /** Background color **/
 
 {{#each config.colors}}
-.bg-{{@key}} {
+.bg-{{cssEscape @key}} {
   background-color: {{@value}};
 }
 
@@ -38,7 +38,7 @@
 /** Background size **/
 
 {{#each config.backgroundSize}}
-.bg-{{@key}} {
+.bg-{{cssEscape @key}} {
   background-size: {{@value}};
 }
 
@@ -47,7 +47,7 @@
 /** Border Colors **/
 
 {{#each config.colors}}
-.border-{{@key}} {
+.border-{{cssEscape @key}} {
   border-color: {{@value}};
 }
 
@@ -56,7 +56,7 @@
 /** Border position **/
 
 {{#each config.backgroundPosition}}
-.bg-{{@key}} {
+.bg-{{cssEscape @key}} {
   background-position: {{@value}};
 }
 
@@ -65,7 +65,7 @@
 /** Border radius **/
 
 {{#each config.borderRadius}}
-.rounded-{{@key}} {
+.rounded-{{cssEscape @key}} {
   border-radius: {{@value}};
 }
 
@@ -74,7 +74,7 @@
 /** Border width **/
 
 {{#each config.borderWidth}}
-.border-{{@key}} {
+.border-{{cssEscape @key}} {
   border-width: {{@value}};
 }
 
@@ -83,7 +83,7 @@
 /** Bottom **/
 
 {{#each config.spacing}}
-.bottom-{{@key}} {
+.bottom-{{cssEscape @key}} {
   bottom: {{@value}};
 }
 
@@ -96,7 +96,7 @@
 }
 
 {{#each config.flex}}
-.flex-{{@key}} {
+.flex-{{cssEscape @key}} {
   flex: {{@value}};
 }
 
@@ -105,7 +105,7 @@
 /** Flex basis **/
 
 {{#each config.flexBasis}}
-.basis-{{@key}} {
+.basis-{{cssEscape @key}} {
   flex-basis: {{@value}};
 }
 
@@ -136,7 +136,7 @@
 }
 
 {{#each config.flexGrow}}
-.grow-{{@key}} {
+.grow-{{cssEscape @key}} {
   flex-grow: {{@value}};
 }
 
@@ -149,7 +149,7 @@
 }
 
 {{#each config.flexShrink}}
-.shrink-{{@key}} {
+.shrink-{{cssEscape @key}} {
   flex-shrink: {{@value}};
 }
 
@@ -158,7 +158,7 @@
 /** Font size **/
 
 {{#each config.fontSize}}
-.text-{{@key}} {
+.text-{{cssEscape @key}} {
   font-size: {{@value}};
 }
 
@@ -167,7 +167,7 @@
 /** Font weight **/
 
 {{#each config.fontWeight}}
-.font-{{@key}} {
+.font-{{cssEscape @key}} {
   font-weight: {{@value}};
 }
 
@@ -176,7 +176,7 @@
 /** Height **/
 
 {{#each config.height}}
-.h-{{@key}} {
+.h-{{cssEscape @key}} {
   height: {{@value}};
 }
 
@@ -185,19 +185,19 @@
 /** Inset **/
 
 {{#each config.spacing}}
-.inset-{{@key}} {
+.inset-{{cssEscape @key}} {
   top: {{@value}};
   right: {{@value}};
   bottom: {{@value}};
   left: {{@value}};
 }
 
-.inset-x-{{@key}} {
+.inset-x-{{cssEscape @key}} {
   right: {{@value}};
   left: {{@value}};
 }
 
-.inset-y-{{@key}} {
+.inset-y-{{cssEscape @key}} {
   top: {{@value}};
   bottom: {{@value}};
 }
@@ -233,7 +233,7 @@
 /** Left **/
 
 {{#each config.spacing}}
-.left-{{@key}} {
+.left-{{cssEscape @key}} {
   left: {{@value}};
 }
 
@@ -242,32 +242,32 @@
 /** Margin **/
 
 {{#each config.margin}}
-.m-{{@key}} {
+.m-{{cssEscape @key}} {
   margin: {{@value}};
 }
 
-.mb-{{@key}} {
+.mb-{{cssEscape @key}} {
   margin-bottom: {{@value}};
 }
 
-.ml-{{@key}} {
+.ml-{{cssEscape @key}} {
   margin-left: {{@value}};
 }
 
-.mr-{{@key}} {
+.mr-{{cssEscape @key}} {
   margin-right: {{@value}};
 }
 
-.mt-{{@key}} {
+.mt-{{cssEscape @key}} {
   margin-top: {{@value}};
 }
 
-.mx-{{@key}} {
+.mx-{{cssEscape @key}} {
   margin-left: {{@value}};
   margin-right: {{@value}};
 }
 
-.my-{{@key}} {
+.my-{{cssEscape @key}} {
   margin-top: {{@value}};
   margin-bottom: {{@value}};
 }
@@ -277,7 +277,7 @@
 /** Max width **/
 
 {{#each config.maxWidth}}
-.max-w-{{@key}} {
+.max-w-{{cssEscape @key}} {
   max-width: {{@value}};
 }
 
@@ -286,7 +286,7 @@
 /** Opacity **/
 
 {{#each config.opacity}}
-.opacity-{{@key}} {
+.opacity-{{cssEscape @key}} {
   opacity: {{@value}};
 }
 
@@ -294,7 +294,7 @@
 
 /** Order **/
 {{#each config.order}}
-.order-{{@key}} {
+.order-{{cssEscape @key}} {
   order: {{@value}};
 }
 
@@ -303,32 +303,32 @@
 /** Padding **/
 
 {{#each config.padding}}
-.p-{{@key}} {
+.p-{{cssEscape @key}} {
   padding: {{@value}};
 }
 
-.pb-{{@key}} {
+.pb-{{cssEscape @key}} {
   padding-bottom: {{@value}};
 }
 
-.pl-{{@key}} {
+.pl-{{cssEscape @key}} {
   padding-left: {{@value}};
 }
 
-.pr-{{@key}} {
+.pr-{{cssEscape @key}} {
   padding-right: {{@value}};
 }
 
-.pt-{{@key}} {
+.pt-{{cssEscape @key}} {
   padding-top: {{@value}};
 }
 
-.px-{{@key}} {
+.px-{{cssEscape @key}} {
   padding-left: {{@value}};
   padding-right: {{@value}};
 }
 
-.py-{{@key}} {
+.py-{{cssEscape @key}} {
   padding-top: {{@value}};
   padding-bottom: {{@value}};
 }
@@ -348,7 +348,7 @@
 /** Right **/
 
 {{#each config.spacing}}
-.right-{{@key}} {
+.right-{{cssEscape @key}} {
   right: {{@value}};
 }
 
@@ -357,7 +357,7 @@
 /** Size **/
 
 {{#each config.size}}
-.size-{{@key}} {
+.size-{{cssEscape @key}} {
   width: {{@value}};
   height: {{@value}};
 }
@@ -367,7 +367,7 @@
 /** Text color **/
 
 {{#each config.colors}}
-.text-{{@key}} {
+.text-{{cssEscape @key}} {
   color: {{@value}};
 }
 
@@ -376,7 +376,7 @@
 /** Top **/
 
 {{#each config.spacing}}
-.top-{{@key}} {
+.top-{{cssEscape @key}} {
   top: {{@value}};
 }
 
@@ -385,7 +385,7 @@
 /** Width **/
 
 {{#each config.width}}
-.w-{{@key}} {
+.w-{{cssEscape @key}} {
   width: {{@value}};
 }
 {{/each}}
